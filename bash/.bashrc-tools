@@ -1,0 +1,10 @@
+# --- Tool integrations (source from .bashrc) ---
+
+# Scoop shims on PATH
+export PATH="$HOME/scoop/shims:$PATH"
+
+# Zoxide (smart cd)
+eval "$(zoxide init bash)"
+
+# fzf keybindings + completion
+eval "$(fzf --bash 2>/dev/null)"
