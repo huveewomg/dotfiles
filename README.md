@@ -34,6 +34,7 @@ Personal dev environment config. Run `setup.ps1` on a fresh Windows machine to i
 | `bash/.bashrc-tools` | source from `.bashrc` | zoxide + fzf + scoop PATH |
 | `git/.gitconfig-tools` | included via `git config --global include.path` | delta pager config |
 | `ohmyposh/mytheme.omp.json` | `~/mytheme.omp.json` | custom oh-my-posh prompt theme |
+| `wsl/.bashrc-tools` | source from WSL `.bashrc` | zoxide + fzf (installed via apt) |
 
 ## Setup
 
@@ -41,7 +42,13 @@ Personal dev environment config. Run `setup.ps1` on a fresh Windows machine to i
 powershell -ExecutionPolicy Bypass -File setup.ps1
 ```
 
-For bash, add this to your `.bashrc`:
+For Git Bash, add this to your `.bashrc`:
 ```bash
 source "$HOME/Desktop/Personal Project/dotfiles/bash/.bashrc-tools"
+```
+
+For WSL Ubuntu, install tools and source config:
+```bash
+sudo apt install -y fzf zoxide
+echo 'source /mnt/c/Users/RT\ Wong/Desktop/Personal\ Project/dotfiles/wsl/.bashrc-tools' >> ~/.bashrc
 ```

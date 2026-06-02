@@ -1,0 +1,7 @@
+# --- Tool integrations for WSL (source from .bashrc) ---
+
+# Zoxide (smart cd)
+eval "$(zoxide init bash)"
+
+# fzf keybindings (Ctrl-R for history search)
+eval "$(fzf --bash 2>/dev/null)"
